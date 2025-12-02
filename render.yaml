@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: blacksenti-n8n
+    env: node
+    buildCommand: npm install
+    startCommand: n8n start
+    envVars:
+      - key: N8N_HOST
+        value: blacksenti-n8n.onrender.com
+      - key: N8N_PORT
+        value: 10000
+      - key: WEBHOOK_URL
+        value: https://blacksenti-n8n.onrender.com/
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_CORS_ALLOWED_ORIGINS
+        value: https://blacksenti-n8n.onrender.com
